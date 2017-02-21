@@ -11,9 +11,9 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float translation = Time.deltaTime * 1;
+        float translation = Time.deltaTime * 3;
         transform.Translate(0, -translation, 0);
         if (Input.GetKeyDown("space"))
-         transform.Translate(0, 3, 0); ;
+         transform.Translate(0, translation+2, 0); 
     }
 }
