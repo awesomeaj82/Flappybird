@@ -460,7 +460,8 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   cloudProjectId: 4a82661e-3acb-42a2-8ea0-36b392e50197
   projectName: FlappyBird
   organizationId: awesomeaj82
