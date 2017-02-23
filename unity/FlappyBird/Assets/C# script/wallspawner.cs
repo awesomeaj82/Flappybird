@@ -9,7 +9,6 @@ public class wallspawner : MonoBehaviour {
     public int spawntime;
     public int timer=0;
     private int randnum;
-    public int difficulty;
     public int difficultygap;
     Vector3 wallpostiontop,wallpostionbottom;
     // Use this for initialization
