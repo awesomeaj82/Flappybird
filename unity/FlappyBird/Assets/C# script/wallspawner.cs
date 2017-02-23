@@ -27,8 +27,8 @@ public class wallspawner : MonoBehaviour {
             
             wallpostiontop = transform.position;
             wallpostionbottom = transform.position;
-            wallpostiontop.y = +1*(randnum/100)+3;//fix random to float value somehow 
-            wallpostionbottom.y = wallpostiontop.y-5-difficultygap;
+            wallpostiontop.y = (randnum/100)+4;//fix random to float value somehow 
+            wallpostionbottom.y = (randnum / 100)-2-difficultygap;
             timer = spawntime;
             Instantiate(walltop,wallpostiontop , transform.rotation);
             Instantiate(wallbottom, wallpostionbottom, transform.rotation);

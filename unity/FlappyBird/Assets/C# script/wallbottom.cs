@@ -5,6 +5,7 @@ using UnityEngine;
 public class wallbottom : MonoBehaviour {
 
     Vector3 position;
+    public int difficultyspeedbottom;
     
 
 	// Use this for initialization
@@ -17,7 +18,7 @@ public class wallbottom : MonoBehaviour {
         
             position = transform.position;
         
-        float translation = Time.deltaTime * 1;
+        float translation = Time.deltaTime * 1*difficultyspeedbottom;
         transform.Translate(-translation, 0, 0);
 
         position.x += -translation;

@@ -5,9 +5,10 @@ using UnityEngine;
 public class walltop : MonoBehaviour {
 
     Vector3 position;
-    
-	// Use this for initialization
-	void Start () {
+    public int difficultyspeedtop;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 
@@ -16,7 +17,7 @@ public class walltop : MonoBehaviour {
     {
             position = transform.position;
         
-        float translation = Time.deltaTime * 1;
+        float translation = Time.deltaTime * 1*difficultyspeedtop;
         transform.Translate(-translation, 0, 0);
         
         position.x += -translation;
