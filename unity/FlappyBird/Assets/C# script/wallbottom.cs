@@ -5,7 +5,7 @@ using UnityEngine;
 public class wallbottom : MonoBehaviour {
 
     Vector3 position;
-    bool firstframe=true;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -14,10 +14,9 @@ public class wallbottom : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (firstframe == true) {
-            firstframe = false;
+        
             position = transform.position;
-        }
+        
         float translation = Time.deltaTime * 1;
         transform.Translate(-translation, 0, 0);
 

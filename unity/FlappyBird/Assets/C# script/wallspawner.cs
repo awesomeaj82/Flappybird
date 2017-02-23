@@ -8,8 +8,9 @@ public class wallspawner : MonoBehaviour {
     public GameObject wallbottom;
     public int spawntime;
     public int timer=0;
-    public int randnum;
+    private int randnum;
     public int difficulty;
+    public int difficultygap;
     Vector3 wallpostiontop,wallpostionbottom;
     // Use this for initialization
     void Start () {
@@ -19,16 +20,16 @@ public class wallspawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        
+        randnum = Random.Range(-300, 400);//fix random number to not go every frame
+        Debug.Log(randnum);
 
         timer--;
         if (timer <= 0) {
             
-            randnum = (Random.Range(0,difficulty*10 ))/10;
             wallpostiontop = transform.position;
             wallpostionbottom = transform.position;
-            wallpostiontop.y = +1*randnum+3;
-            wallpostionbottom.y = wallpostiontop.y -7;
+            wallpostiontop.y = +1*(randnum/100)+3;//fix random to float value somehow 
+            wallpostionbottom.y = wallpostiontop.y-5-difficultygap;
             timer = spawntime;
             Instantiate(walltop,wallpostiontop , transform.rotation);
             Instantiate(wallbottom, wallpostionbottom, transform.rotation);
