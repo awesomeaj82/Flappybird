@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4835327956642142}
   - component: {fileID: 212983180968823512}
-  - component: {fileID: 114059483178250030}
+  - component: {fileID: 114071936995371660}
   m_Layer: 0
   m_Name: bottom wall
   m_TagString: Untagged
@@ -35,13 +35,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1754278789288784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -3, z: 0}
+  m_LocalPosition: {x: 5, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114059483178250030
+--- !u!114 &114071936995371660
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,10 +49,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1754278789288784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0368ce88ac9ee1479bdce9028dad08a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c4414acf9803f646a7756f1ae734328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficultyspeedbottom: 3
+  difficultyspeed: 3
 --- !u!212 &212983180968823512
 SpriteRenderer:
   m_ObjectHideFlags: 1

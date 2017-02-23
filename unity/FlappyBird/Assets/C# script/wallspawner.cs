@@ -6,33 +6,42 @@ public class wallspawner : MonoBehaviour {
 
     public GameObject walltop;
     public GameObject wallbottom;
-    public int spawntime;
-    public int timer=0;
+    public GameObject coin;
+    public int spawntimewall;
+    public int timerwall=0,timercoin=0;
     private int randnum;
-    public int difficultygap;
-    Vector3 wallpostiontop,wallpostionbottom;
-    // Use this for initialization
-    void Start () {
-        
-    }
+    public float difficultygap,difficultycoin;
+    Vector3 wallpostiontop,wallpostionbottom,coinposition;
+    public int spawntimecoin;
+
 	
 	// Update is called once per frame
 	void Update () {
 
-        randnum = Random.Range(-300, 400);//fix random number to not go every frame
-        Debug.Log(randnum);
+        
 
-        timer--;
-        if (timer <= 0) {
+        
+        timerwall--;
+        if (timerwall <= 0) {
             
             wallpostiontop = transform.position;
             wallpostionbottom = transform.position;
             wallpostiontop.y = (randnum/100)+4;//fix random to float value somehow 
             wallpostionbottom.y = (randnum / 100)-2-difficultygap;
-            timer = spawntime;
+            timerwall = spawntimewall;
             Instantiate(walltop,wallpostiontop , transform.rotation);
             Instantiate(wallbottom, wallpostionbottom, transform.rotation);
             Debug.Log(randnum);
+        }
+        randnum = Random.Range(-300, 400);//fix random number to not go every frame
+        timercoin--;
+        if (timercoin <= 0)
+        {
+            timercoin = spawntimecoin + Mathf.FloorToInt(difficultycoin * 6);
+            coinposition.y = randnum / 100;
+            coinposition.x = 6;
+            Instantiate(coin, coinposition, transform.rotation);
+
         }
     }
 }
